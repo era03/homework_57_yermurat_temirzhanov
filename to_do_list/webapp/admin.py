@@ -4,10 +4,10 @@ from webapp.models import  Types, Statuses, Tasks
 
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('id', 'task', 'description', 'status', 'type', 'created_at', 'updated_at')
-    list_filter = ('id', 'task', 'description', 'type', 'status', 'created_at', 'updated_at')
-    search_fields = ('task', 'created_at', 'updated_at', 'status', 'type')
-    fields = ('task', 'description', 'status', 'type', 'created_at', 'updated_at')
+    list_display = ('id', 'task', 'description', 'status', 'created_at', 'updated_at')
+    list_filter = ('id', 'task', 'description', 'status', 'created_at', 'updated_at')
+    search_fields = ('task', 'created_at', 'updated_at', 'status')
+    fields = ('task', 'description', 'status', 'created_at', 'updated_at')
     readonly_fields = ('id', 'created_at', 'updated_at')
   
 

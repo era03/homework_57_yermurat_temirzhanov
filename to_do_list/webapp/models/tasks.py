@@ -21,11 +21,10 @@ class Tasks(models.Model):
         related_name='statuses',
         on_delete=models.RESTRICT
     )
-    type = models.ForeignKey(
+    type = models.ManyToManyField(
         to='webapp.Types',
         verbose_name='Тип задачи',
-        related_name='types',
-        on_delete=models.RESTRICT
+        related_name='types'
     )
     created_at = models.DateTimeField(
         verbose_name='Дата создания', 
